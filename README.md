@@ -1,6 +1,6 @@
 ### Ben Maccini
 
-Howdy, I'm Ben, a developer with experience in startups, early-stage product development, algorithms
+Howdy, I'm Ben, a Texan developer with experience in startups, early-stage product development, algorithms
 and machine learning. I have spent time in the restaurant industry, local food systems and with retail.
 Food and food-related technologies are my passion.
 
