@@ -1,4 +1,4 @@
-## Bowling With Bumpers
+## Bowling With Bumpers | 10.22.2023
 
 **... or how outcome based productivity helps stop me from procrastinating on my editor config**
 
