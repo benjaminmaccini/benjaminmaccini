@@ -67,5 +67,6 @@ Here is a quote I really like.
 
 Of course, I will always install the next new editor I hear about. I'll spend time rewarding my anxious brain with
 small productivity enhancements and won't work efficiently all of the time. But going forward, I will also focus 
-on parts of my workflow that buy me flexibility and comfort without perpetuating the need to be perfect.
+on parts of my workflow that buy me flexibility and comfort without perpetuating the need to be perfect. I'll learn
+to bowl with bumpers and have a bit more fun with it.
 
