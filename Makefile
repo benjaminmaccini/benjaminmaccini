@@ -6,7 +6,7 @@ CONFIG_LINUX := .bashrc
 CONFIG_MAC := .zshrc
 
 INSTALL_FREEBSD := pkg install -f -y -q
-INSTALL_LINUX := sudo apt-get install -y
+INSTALL_LINUX := apt-get -q install -y
 INSTALL_MAC := brew install
 
 PACKAGES := fzf ripgrep jq gh
@@ -30,6 +30,7 @@ ifeq ($(OS), FreeBSD)
 endif 
 ifeq ($(OS), Linux)
 	INSTALL_CMD := $(INSTALL_LINUX)
+	PACKAGES += curl
 	CONFIG_ALL += $(CONFIG_LINUX)
 endif
 ifeq ($(OS), Darwin)
