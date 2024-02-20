@@ -17,13 +17,6 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 alias cobra='$HOME/go/bin/cobra'
 export PATH="$HOME/go/bin/cobra:$PATH"
 
-# Python
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$HOME/.pyenv/bin:$PATH"
-export PATH="$PYENV_ROOT/bin:$PATH"
-export PATH="$PYENV_ROOT/shims:$PATH"
-eval "$(pyenv init -)"
-
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
 ######################

@@ -1,12 +1,9 @@
-" set the runtime path to include plug and initialize
-" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin()
 
-Plug 'junegunn/fzf.vim'  " brew install fzf ripgrep
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf'
 
-" All of your Plugs must be added before the following line
-call plug#end()            " required
+call plug#end()
 
 " Key mappings
 nnoremap <SPACE> <Nop>
@@ -55,7 +52,7 @@ set splitright
 set sessionoptions="curdir,folds,help,options,tabpages,winsize"
 
 " Backup settings
-execute "set backupdir=" . "~/vim.bak/" . "/backup"
+set backupdir=~/vim.bak
 set backup
 set writebackup
 
@@ -76,8 +73,7 @@ set wildignore+=*.pyc         " Ignore Python compiled files
 set wildignore+=*.swp         " Ignore vim backups
 
 " Auto generate tags file on file write of .py files
-" brew install ctags
-autocmd BufWritePost *.c,*.h,*.cpp,*.hpp,*.java,*.php,*.js,*.py,*.rb,*.sh,*.html,*.css,*.xml,*.pl,*.sql,*.lua,*.swift,*.go,*.dart,*.ts silent! !ctags --options=/Users/badmin/.ctags -R .
+autocmd BufWritePost *.c,*.h,*.cpp,*.hpp,*.java,*.php,*.js,*.py,*.rb,*.sh,*.html,*.css,*.xml,*.pl,*.sql,*.lua,*.swift,*.go,*.dart,*.ts silent! !ctags .
 
 " Reopen at last closed line
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif

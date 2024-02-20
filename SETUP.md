@@ -1,50 +1,41 @@
 ## Installation
 
-For MacOS.
+Simply run `make` in the current directory. FreeBSD users will need to install/use the GNU version, `gmake`
 
-```
-ln .vimrc ~/.vimrc
-ln .zshrc ~/.zshrc
-
-# Developer tools, also available for install via running "git init" for the first time
-xcode-select --install
-
-# Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# Python Stuff
-brew install pyenv python
-pyenv install <version>  # Get versions from pyenv install --list
-pyenv global <version>
-curl -sSL https://install.python-poetry.org | python -
-
-## Editor
-## Follow the comments inside .vimrc for packages and installation instructions
-
-# Tooling
-
-## CLI
-brew install fzf ripgrep jq gh
-
-## Databases
-brew install pgcli
-```
+After installation, you need to open vim and run `:PlugInstall`
 
 ## Hardware
 
-- Keyboard: [Mistel MD600v3](https://mistelkeyboard.com/products/d7283e95f4ffcbc7b90f2dc54d1a0468)
-- Mouse: [Logitech G502 Hero](https://www.logitechg.com/en-us/products/gaming-mice/g502-hero-gaming-mouse.910-005469.html)
-- Computers: Macbook Air i5 8 GB Memory (daily driver), Raspberry Pi 4 (pihole + tailscale)
-- Phone: iPhoneSE
-- E-Readers: Onyx Boox Tab Ultra (home reading and news), Kobo Clara (travel reading - can fit in my pocket)
-- Analog: $1 Composite notebook + [Fisher Space Pen](https://www.spacepen.com) (because refills are accessible and it writes nicely)
-- Other: [Shoebox](https://www.outdoorgearlab.com/reviews/climbing/climbing-shoes-womens/scarpa-furia-s) for my computer to sit on so my neck doesn't hurt, glasses so my eyes don't hurt
+Things change a lot here, but I generally have two setups:
+
+- Home
+    - Keyboard: [Mistel MD600v3](https://mistelkeyboard.com/products/d7283e95f4ffcbc7b90f2dc54d1a0468)
+    - Mouse: [Logitech G502 Hero](https://www.logitechg.com/en-us/products/gaming-mice/g502-hero-gaming-mouse.910-005469.html)
+    - Computers: Raspberry Pi 4 (pihole + tailscale)
+    - Other: [Shoebox](https://www.outdoorgearlab.com/reviews/climbing/climbing-shoes-womens/scarpa-furia-s) for my computer to sit on so my neck doesn't hurt, glasses so my eyes don't hurt
+- Travel
+    - Keyboard: Apple Magic Keyboard
+    - Mouse: Logitech M858
+    - Computers: Onyx Boox Tab Ultra, FreeBSD server on Vultr
+- Both
+    - Phone: iPhone 15 with Compass phone stand
+    - Analog: Paper + [Fisher Space Pen](https://www.spacepen.com) (because refills are accessible and it writes nicely)
+
 
 ## Workflows/Ideologies
 
-**Applications-** Use native applications where possible. Instead of installing custom clients for terminal, mail, browser, calendar, diagramming, text editing, password management, etc... just use the base clients that come installed for those utilities. For the most part, these applications function just fine and any additional features that a custom application provides is generally outweighed by the cost of maintenance for that application.
+**Applications-** Use native applications where possible. Instead of installing custom clients for terminal, 
+mail, browser, calendar, diagramming, text editing, password management, etc... just use the base clients 
+that come installed for those utilities. For the most part, these applications function just fine and any 
+additional features that a custom application provides is generally outweighed by the cost of maintenance 
+for that application.
 
-**Note taking -** I use Apple notes for my note taking because it has rich text formatting, supports inline pictures, and syncs between all my devices. Sometimes I wish I could use a Markdown-based solution, but not so much. If I ever need to switch I can export the notes. My notes are organized using a modified Dewey Decimal like system (10 categories that contain 10 sub categories). I stole this idea from somewhere, and it isn't super helpful, but sometimes I can reference things for work based on the number, which is nice. Some considerations:
+**Note taking -** I use Apple notes for my note taking because it has rich text formatting, supports inline
+pictures, and syncs between all my devices. Sometimes I wish I could use a Markdown-based solution, but not
+so much. If I ever need to switch I can export the notes. My notes are organized using a modified Dewey
+Decimal like system (10 categories that contain 10 sub categories). I stole this idea from somewhere, and it
+isn't super helpful, but sometimes I can reference things for work based on the number, which is nice. Some
+considerations:
 
 - I keep a few long-lived notes for frequently revisited items (TODOs, travel plans, useful code snippits).
 - Use _dated_ call notes with the outcome, people involved and agenda.
