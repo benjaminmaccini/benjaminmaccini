@@ -1,6 +1,6 @@
 OS := $(shell uname -s)
 
-CONFIG_ALL := .ctags .vimrc
+CONFIG_ALL := .ctags .vimrc .sqliterc
 CONFIG_FREEBSD := .shrc
 CONFIG_LINUX := .bashrc
 CONFIG_MAC := .zshrc
