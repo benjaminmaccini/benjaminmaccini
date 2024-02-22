@@ -9,7 +9,7 @@ INSTALL_FREEBSD := pkg install -f -y -q
 INSTALL_LINUX := apt-get -q install -y
 INSTALL_MAC := brew install
 
-PACKAGES := fzf ripgrep jq gh
+PACKAGES := fzf ripgrep jq gh sqlite3
 
 # These are generic installations and commands
 SETUP_ALL := \

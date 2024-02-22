@@ -1,1 +1,7 @@
 alias ctags="exctags"
+
+# Go CLI stuff
+alias cobra='$HOME/go/bin/cobra'
+export PATH="$HOME/go/bin/cobra:$PATH"
+
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
