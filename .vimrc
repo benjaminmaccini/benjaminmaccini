@@ -75,6 +75,9 @@ set wildignore+=*.swp         " Ignore vim backups
 " Auto generate tags file on file write of .py files
 autocmd BufWritePost *.c,*.h,*.cpp,*.hpp,*.java,*.php,*.js,*.py,*.rb,*.sh,*.html,*.css,*.xml,*.pl,*.sql,*.lua,*.swift,*.go,*.dart,*.ts silent! !ctags .
 
+" Format Go files on save
+autocmd BufWritePost *.go silent! !gofmt -w .
+
 " Reopen at last closed line
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
