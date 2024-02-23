@@ -1,6 +1,6 @@
 OS := $(shell uname -s)
 
-CONFIG_ALL := .ctags .vimrc .sqliterc
+CONFIG_ALL := .ctags .vimrc .sqliterc .config/nvim/init.lua
 CONFIG_FREEBSD := .shrc
 CONFIG_LINUX := .bashrc
 CONFIG_MAC := .zshrc
@@ -9,12 +9,12 @@ INSTALL_FREEBSD := pkg install -f -y -q
 INSTALL_LINUX := apt-get -q install -y
 INSTALL_MAC := brew install
 
-PACKAGES := fzf ripgrep jq gh sqlite3
+PACKAGES := fzf ripgrep jq gh sqlite3 neovim go
 
 # These are generic installations and commands
 SETUP_ALL := \
-	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim; \
-	mkdir -p $(HOME)/vim.bak;
+	mkdir -p $HOME/.config; \
+	mkdir -p $HOME/.config/nvim;
 
 SETUP_MAC := \
 	xcode-select --install; \
@@ -50,12 +50,12 @@ install:
 	@echo "Executing generic setup..."
 	$(SETUP_ALL)
 
-# This will copy and overwrite based on the OS
+# This will create a symbolic link
 init/config:
 	@echo "Copying configuration files on $(OS)..."
 	@for f in $(CONFIG_ALL); do \
 		echo "Initializing $$f..."; \
-		cp $$f $(HOME)/$$f; \
+		ln -f $$f $(HOME)/$$f; \
 	done
 
 .PHONY: all install init/config

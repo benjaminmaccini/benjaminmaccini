@@ -1,11 +1,3 @@
-call plug#begin()
-
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/fzf'
-
-call plug#end()
-
 " Key mappings
 nnoremap <SPACE> <Nop>
 let mapleader=" "
@@ -26,7 +18,6 @@ nnoremap <C-\> <C-^>
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>/ :Rg<CR>
-nnoremap gd <C-]>
 
 " fzf
 set rtp+=~/.fzf
@@ -35,7 +26,6 @@ let $FZF_DEFAULT_COMMAND='rg --hidden -l ""'
 " General config
 syntax on
 filetype on
-
 set ttyfast			 " push more characters through to the terminal per cycle
 set lazyredraw                   " don't update the screen during commands
 set nu
@@ -47,19 +37,7 @@ set autoread    		 " Auto update read-only files
 set autoindent
 set splitbelow
 set splitright
-set scrolloff=999
-
-" Customize session options. Namely, I don't want to save hidden and
-" unloaded buffers or empty windows.
-set sessionoptions="curdir,folds,help,options,tabpages,winsize"
-
-" Backup settings
-set backupdir=~/vim.bak
-set backup
-set writebackup
-
-" Show matching brackets
-set showmatch
+set showmatch " Show matching brackets
 
 " Matching settings
 set hlsearch
@@ -74,15 +52,8 @@ set wildignore+=*.6           " Ignore Go compiled files
 set wildignore+=*.pyc         " Ignore Python compiled files
 set wildignore+=*.swp         " Ignore vim backups
 
-" Auto generate tags file on file write of .py files
-autocmd BufWritePost *.c,*.h,*.cpp,*.hpp,*.java,*.php,*.js,*.py,*.rb,*.sh,*.html,*.css,*.xml,*.pl,*.sql,*.lua,*.swift,*.go,*.dart,*.ts silent! !ctags .
-
-let g:go_fmt_autosave = 1
-
 " Reopen at last closed line
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-
-nnoremap <Leader>vm :vsp ~/.vimrc<CR>
 
 " Generate helptags, must be set at end
 silent! helptags ALL

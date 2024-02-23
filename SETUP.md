@@ -42,12 +42,12 @@ considerations:
 - Don't think too hard on where a note should go. If something isn't where you think it should be, you can always fuzzy search for it.
 - Digital notes are good, but any hard thinking and in person conversations should be done with pen and paper.
 
-**Code Editing -** This is the majority of my workflow optimization and I could write about it forever. I'll try to keep it brief. I use the base Mac install of Vim with a custom [.vimrc](.vimrc). Cutting to the chase, I prefer my editors doing one thing well and find that _good dev tooling_ in conjuction with an editor can provide an IDE like experience with standardization among programmers in an organization.
+**Code Editing -** This is the majority of my workflow optimization and I could write about it forever. I'll try to keep it brief. I use NeoVim. Cutting to the chase, I prefer my editors doing one thing well and find that _good dev tooling_ in conjuction with an editor can provide an IDE like experience with standardization among programmers in an organization.
 
-I have used almost everything (NeoVim, Jetbrains' IDEs, Sublime Text, helix, Kakoune, nano, VS Code, Notepad++, Eclipse) and still love checking out new options. When it comes to editing a large codebase, here are some things I couldn't live without (along with the Vim implementation):
+I have used almost everything and still love checking out new options. When it comes to editing a large codebase, here are some things I couldn't live without (along with the Vim implementation):
 
 - Fuzzy searching ([fzf](https://github.com/junegunn/fzf))
-- Go to definition ([ctags](https://ctags.io))
+- Go to definition (Native support with LSP)
 - Responsiveness
 - Bulk actions (sed)
 - Keyboard navigation (binding improvements)
@@ -58,7 +58,7 @@ Out-of-the-box IDEs are great for all of these, especially the bulk actions for 
 
 Other editors are fun to explore. But they provide marginal improvements for me. Here are my brief thoughts on those:
 - Helix: Really easy to set up and use. Key bindings are great but I had to install a separate terminal for color support and certain key bindings. The window navigation command (Ctrl-W) is too close to application window close (Cmd+W). I lost a good amount of unsaved work due to fat-thumbing and never looked back. 
-- Neovim: This has the biggest learning curve for any editor, but I'm glad I learned about things like LSP. I like the pseudo-IDE capabilty. Really no big complaints, other than I like working with the pre-installed applications.
+- Neovim + fuckton of plugins: This has the biggest learning curve for any editor, but I'm glad I learned about things like LSP. I like the pseudo-IDE capabilty. Really no big complaints.
 - nano: Only good for sshing into raw systems that don't have vim.
 - Sublime: Somewhere between an IDE and a text editor. I used this a bunch back in university and it really blew my mind, that that level of software quality could be free. I've revisited over the years, but the multi-cursor is the only feature I really see as significant. Plus, to this day, the package management sketches me out.
 
