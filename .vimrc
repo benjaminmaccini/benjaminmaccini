@@ -18,6 +18,7 @@ nnoremap <C-\> <C-^>
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>/ :Rg<CR>
+tnoremap <Esc> <C-\><C-N>
 
 " fzf
 set rtp+=~/.fzf
