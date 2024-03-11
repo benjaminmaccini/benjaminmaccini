@@ -2,7 +2,9 @@
 
 Simply run `make` in the current directory. FreeBSD users will need to install/use the GNU version, `gmake`
 
-After installation, you need to open vim and run `:PlugInstall`
+Not necessary, but if you'd like to run ChatGPT in neovim, then you will
+need to add a key from [OpenAI](https://platform.openai.com/api-keys) to your
+`~/.profile` using `export OPENAI_API_KEY=<YOUR_KEY>`
 
 ## Hardware
 
@@ -16,7 +18,7 @@ Things change a lot here, but I generally have two setups:
 - Travel
     - Keyboard: Apple Magic Keyboard
     - Mouse: Logitech M858
-    - Computers: Onyx Boox Tab Ultra, FreeBSD server on Vultr
+    - Computers: Onyx Boox Tab Ultra, servers on Vultr
 - Both
     - Phone: iPhone 15 with Compass phone stand
     - Analog: Paper + [Fisher Space Pen](https://www.spacepen.com) (because refills are accessible and it writes nicely)

@@ -19,7 +19,21 @@ require("lazy").setup({
 	"williamboman/mason-lspconfig.nvim",
 	"neovim/nvim-lspconfig",
 	"junegunn/fzf",
-	"junegunn/fzf.vim"
+	"junegunn/fzf.vim",
+	{
+		"jackMort/ChatGPT.nvim",
+		event = "VeryLazy",
+		config = function()
+			local home = vim.fn.expand("$HOME")
+			require("chatgpt").setup()
+		end,
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+			"nvim-lua/plenary.nvim",
+			"folke/trouble.nvim",
+			"nvim-telescope/telescope.nvim"
+		}
+	}
 })
 
 -- Mason manages the insallation of binaries for DAP
@@ -31,7 +45,7 @@ require("mason-lspconfig").setup()
 -- LSP configurations
 local lspconfig = require('lspconfig')
 lspconfig.gopls.setup {}
-
+lspconfig.pyright.setup {}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
