@@ -19,6 +19,9 @@ export PATH="$HOME/go/bin/cobra:$PATH"
 
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
+# Python
+source "$HOME/.rye/env"
+
 ######################
 # Begin Productivity #
 ######################

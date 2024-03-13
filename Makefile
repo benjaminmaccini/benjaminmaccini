@@ -17,7 +17,8 @@ PACKAGES := fzf ripgrep jq gh sqlite3 neovim go
 # These are generic installations and commands
 SETUP_ALL := \
 	mkdir -p $(HOME)/.config; \
-	mkdir -p $(HOME)/.config/nvim;
+	mkdir -p $(HOME)/.config/nvim; \
+	curl -sSf https://rye-up.com/get | bash;
 
 SETUP_MAC := \
 	xcode-select --install; \
