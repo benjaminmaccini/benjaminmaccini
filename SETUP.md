@@ -2,6 +2,8 @@
 
 Simply run `make` in the current directory. FreeBSD users will need to install/use the GNU version, `gmake`
 
+Certain language servers will need to be added in neovim via `:Mason`, it's interactive.
+
 Not necessary, but if you'd like to run ChatGPT in neovim, then you will
 need to add a key from [OpenAI](https://platform.openai.com/api-keys) to your
 `~/.profile` using `export OPENAI_API_KEY=<YOUR_KEY>`
