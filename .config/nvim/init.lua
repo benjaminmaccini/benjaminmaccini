@@ -46,6 +46,7 @@ require("mason-lspconfig").setup()
 local lspconfig = require('lspconfig')
 lspconfig.gopls.setup {}
 lspconfig.pyright.setup {}
+lspconfig.zls.setup {}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
