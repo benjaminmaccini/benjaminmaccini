@@ -12,7 +12,7 @@ INSTALL_MAC := brew install
 # Default
 INSTALL_CMD := $(INSTALL_MAC)
 
-PACKAGES := fzf ripgrep jq gh sqlite3 neovim go npm
+PACKAGES := fzf ripgrep jq gh sqlite3 neovim go npm zig
 
 # These are generic installations and commands
 SETUP_ALL := \
