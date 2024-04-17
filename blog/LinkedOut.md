@@ -1,5 +1,7 @@
 ## LinkedOut | 2020-09-09
 
+*Note (04/17/2024): I have created an account, although just as a placeholder. I believe the sentiment here still stands, however when it comes to a digital identity, is not so much about what services you are on, but rather which ones you are not on. I'm just hedging against any future problems*
+
 You know LinkedIn. Although it has a strong value proposition, I am off of the site for several reasons.
 
 - It promotes ["hustle"](https://www.youtube.com/watch?v=_o7qjN3KF8U) culture. The video I linked is more comedic and doesn't have to do with LinkedIn specifically, but I think it 
