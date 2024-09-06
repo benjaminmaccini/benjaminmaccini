@@ -12,7 +12,7 @@ INSTALL_MAC := brew install
 # Default
 INSTALL_CMD := $(INSTALL_MAC)
 
-PACKAGES := fzf ripgrep jq gh sqlite3 neovim go npm zig
+PACKAGES := vim fzf ripgrep jq gh sqlite3 npm
 
 # These are generic installations and commands
 SETUP_ALL := \
@@ -27,22 +27,23 @@ SETUP_MAC := \
 SETUP_LINUX := \
 	sudo add-apt-repository ppa:neovim-ppa/stable -y; \
 	sudo add-apt-repository ppa:neovim-ppa/unstable -y; \
-	sudo apt update;
+	sudo apt update; \
+	snap install zig --classic --beta;
 
 ifeq ($(OS), FreeBSD)
 	INSTALL_CMD := $(INSTALL_FREEBSD)
-	PACKAGES += ctags git
+	PACKAGES += ctags git go zig
 	CONFIG_ALL += $(CONFIG_FREEBSD)
-endif 
+endif
 ifeq ($(OS), Linux)
 	INSTALL_CMD := $(INSTALL_LINUX)
-	PACKAGES += curl
+	PACKAGES += curl golang
 	CONFIG_ALL += $(CONFIG_LINUX)
 	SETUP_ALL += $(SETUP_LINUX)
 endif
 ifeq ($(OS), Darwin)
 	INSTALL_CMD := $(INSTALL_MAC)
-	PACKAGES += ctags pgcli
+	PACKAGES += ctags go pgcli zig
 	CONFIG_ALL += $(CONFIG_MAC)
 endif
 
@@ -62,7 +63,7 @@ install:
 # This will create a symbolic link
 init/config:
 	@echo "Copying configuration files on $(OS)..."
-	@for f in $(CONFIG_ALL); do \
+	for f in $(CONFIG_ALL); do \
 		echo "Initializing $$f..."; \
 		ln -srf $$f $(HOME)/$$f; \
 	done
