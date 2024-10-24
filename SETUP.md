@@ -1,6 +1,31 @@
 ## Installation
 
-Simply run `make` in the current directory. FreeBSD users will need to install/use the GNU version, `gmake`
+```bash
+# MacOS
+# xcode-select --install
+# FreeBSD
+# sudo pkg install curl git
+# Ubuntu
+sudo apt-get install curl git
+
+# Git setup
+ssh-keygen
+cat .ssh/id_ed25519.pub
+
+# Copy into ssh keys on Github (navigate to the browser)
+# Clone the repo
+git clone https://github.com/benjaminmaccini/benjaminmaccini
+cd benjaminmaccini
+
+# Link the directory
+ln -sf $(pwd)/.config/* $HOME/.config
+
+# Install nix and nix#home-manager
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+
+# Install all the things
+nix run home-manager/master -- init --switch
+```
 
 ## Hardware
 
@@ -11,14 +36,15 @@ Things change a lot here, but I generally have two setups:
     - Mouse: [Logitech G502 Hero](https://www.logitechg.com/en-us/products/gaming-mice/g502-hero-gaming-mouse.910-005469.html)
     - Computers:
     	- Onyx Boox Tab Ultra
+      - 2016 Dell Inspiron 7368 2in1
+        - 8.0 GiB
+       	- Intel® Core™ i5-6200U CPU
      	- 2014 Mac Mini
       	- 8.0 GiB
       	- Intel® Core™ i5-4278U CPU @ 2.60GHz × 4
-       	- Dual boot Ubuntu and OSX
     	- Home Server: Raspberry Pi 4 (pihole + tailscale)
-    - Phone: iPhone 15 with a phone stand
+    - Phone: iPhone 15
     - Analog: Composite notebooks
-
 
 ## Workflows/Ideologies
 
