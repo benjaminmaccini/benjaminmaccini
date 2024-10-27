@@ -1,8 +1,5 @@
-{ config, pkgs, ... }:
+{ config, pkgs, services, home-manager, users, lib, ... }:
 
-let
-  unstable = import <nixos-unstable> {};
-in
 {
   home.username = "badmin";
   home.homeDirectory = "/home/badmin";
@@ -15,6 +12,8 @@ in
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "24.05"; # Please read the comment before changing.
+
+  nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
     curl
@@ -31,13 +30,15 @@ in
     hledger
     hurl
     jq
-    kitty
     litecli
     neofetch
     nodejs
     pgcli
     ripgrep
+    R
+    rstudio
     rustc
+    rye
     signal-desktop
     silver-searcher
     sqlite
@@ -46,7 +47,6 @@ in
     uv
     vim
     wget
-    unstable.zed-editor
     zig
     zotero
   ];
@@ -55,21 +55,27 @@ in
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
-    ".bashrc".source = dotfiles/bashrc;
-    ".fishrc".source = dotfiles/fishrc;
-    ".shrc".source = dotfiles/shrc;
-    ".sqliterc".source = dotfiles/sqliterc;
-    ".vimrc".source = dotfiles/vimrc;
-    ".zshrc".source = dotfiles/zshrc;
+    ".bashrc".source = dotfiles/.bashrc;
+    ".fishrc".source = dotfiles/.fishrc;
+    ".shrc".source = dotfiles/.shrc;
+    ".sqliterc".source = dotfiles/.sqliterc;
+    ".vimrc".source = dotfiles/.vimrc;
+    ".zshrc".source = dotfiles/.zshrc;
   };
 
   home.sessionVariables = {
     EDITOR = "vim";
   };
 
-  # Set defaults
-  programs.fish.enable = true;
-  users.defaultUserShell = pkgs.fish;
+  programs.git = {
+    enable = true;
+    userName  = "Benjamin Maccini";
+    userEmail = "benjaminmaccini@gmail.com";
+  };
+
+  services.syncthing = {
+    enable = true;
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

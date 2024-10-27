@@ -17,15 +17,25 @@ cat .ssh/id_ed25519.pub
 git clone https://github.com/benjaminmaccini/benjaminmaccini
 cd benjaminmaccini
 
-# Link the directory
-ln -sf $(pwd)/.config/* $HOME/.config
+# Copy the directory
+cp -R $(pwd)/.config/home-manager $HOME/.config
 
 # Install nix and nix#home-manager
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 
 # Install all the things
-nix run home-manager/master -- init --switch
+nix run home-manager/master -- init --switch -b backup
 ```
+
+Keep things up to date with `home-manager switch` and the following
+```
+rsync -av --delete ~/.config/home-manager/ ~/benjaminmaccini/.config/home-manager/
+```
+
+## Notes
+
+Graphical applications that require the GPU (Zed, kitty, etc...) should be manually installed
+since home-manager lacks the permissions to handle system setup.
 
 ## Hardware
 
