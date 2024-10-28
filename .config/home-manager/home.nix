@@ -44,6 +44,7 @@
     sqlite
     syncthing
     thunderbird
+    typst
     uv
     vim
     wget
