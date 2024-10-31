@@ -24,6 +24,7 @@
     fzf
     gh
     git
+    gnumake
     go
     golangci-lint
     helix
@@ -57,7 +58,7 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     ".bashrc".source = dotfiles/.bashrc;
-    ".fishrc".source = dotfiles/.fishrc;
+    ".config/fish/config.fish".source = dotfiles/.fishrc;
     ".shrc".source = dotfiles/.shrc;
     ".sqliterc".source = dotfiles/.sqliterc;
     ".vimrc".source = dotfiles/.vimrc;
