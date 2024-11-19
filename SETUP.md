@@ -40,21 +40,21 @@ since home-manager lacks the permissions to handle system setup.
 ## Hardware
 
 Things change a lot here, but I generally have two setups:
-    - Keyboards:
-    	- Apple Magic Keyboard
-    	- [Mistel MD600v3](https://mistelkeyboard.com/products/d7283e95f4ffcbc7b90f2dc54d1a0468)
-    - Mouse: [Logitech G502 Hero](https://www.logitechg.com/en-us/products/gaming-mice/g502-hero-gaming-mouse.910-005469.html)
-    - Computers:
-    	- Onyx Boox Tab Ultra
-      - 2016 Dell Inspiron 7368 2in1
-        - 8.0 GiB
-       	- Intel® Core™ i5-6200U CPU
-     	- 2014 Mac Mini
-      	- 8.0 GiB
-      	- Intel® Core™ i5-4278U CPU @ 2.60GHz × 4
-    	- Home Server: Raspberry Pi 4 (pihole + tailscale)
-    - Phone: iPhone 15
-    - Analog: Composite notebooks
+- Keyboards:
+ 	- Apple Magic Keyboard
+ 	- [Mistel MD600v3](https://mistelkeyboard.com/products/d7283e95f4ffcbc7b90f2dc54d1a0468)
+- Mouse: [Logitech G502 Hero](https://www.logitechg.com/en-us/products/gaming-mice/g502-hero-gaming-mouse.910-005469.html)
+- Computers:
+ 	- Onyx Boox Tab Ultra
+  - 2016 Dell Inspiron 7368 2in1
+    - 8.0 GiB
+   	- Intel® Core™ i5-6200U CPU
+ 	- 2014 Mac Mini
+   	- 8.0 GiB
+   	- Intel® Core™ i5-4278U CPU @ 2.60GHz × 4
+ 	- Home Server: Raspberry Pi 4 (pihole + tailscale)
+- Phone: iPhone 15
+- Analog: Composite notebooks
 
 ## Workflows/Ideologies
 
@@ -72,7 +72,7 @@ notes. I use Obsidian notes and pay for the sync functionality. Some considerati
 organize, just keep it as a dated, append-only log of ideas, events, etc...
 
 **Code Editing -**
-As it stands at the end of 2024, I use Zed as my primary with Vim keybindings for large projects and vim with a small [config](/.vimrc). Here are some guiding principles:
+As it stands at the end of 2024, I use Zed as my primary with Vim keybindings for large projects and vim with a small config. Here are some guiding principles:
 - An editor is no replacement for _good dev tooling_. As a bonus, focusing on tooling allows for standardization amongst programmers in an organization.
 - Must-haves for coding
 	- Fuzzy searching
