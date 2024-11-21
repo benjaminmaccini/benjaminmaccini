@@ -37,6 +37,7 @@
     jq
     litecli
     neofetch
+    nixd
     nodejs
     pgcli
     ripgrep
