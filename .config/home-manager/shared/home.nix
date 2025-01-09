@@ -22,6 +22,7 @@
   home.packages = with pkgs; [
     curl
     dbmate
+    duckdb
     elixir
     entr
     fish
@@ -33,6 +34,7 @@
     golangci-lint
     helix
     hledger
+    hledger-ui
     hurl
     jq
     litecli
