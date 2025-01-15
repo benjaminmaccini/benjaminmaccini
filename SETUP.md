@@ -29,7 +29,7 @@ nix run home-manager/master -- init --switch -b backup
 
 Keep things up to date with `home-manager switch` and the following
 ```
-rsync -av --delete ~/.config/home-manager/ ~/benjaminmaccini/.config/home-manager/
+rsync -av --delete ~/.config/ ~/benjaminmaccini/.config/
 ```
 
 ## Notes
