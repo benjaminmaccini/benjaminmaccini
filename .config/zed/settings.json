@@ -26,5 +26,17 @@
     "mode": "system",
     "light": "One Light",
     "dark": "Gruvbox Dark"
+  },
+  "format_on_save": {
+    "external": {
+      "command": "npx",
+      "arguments": ["prettier", "--stdin-filepath", "{buffer_path}"]
+    }
+  },
+  "language_overrides": {
+    "TypeScript": {
+      "use_language_server": true,
+      "workspace_path_override": "."
+    }
   }
 }
