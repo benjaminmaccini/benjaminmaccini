@@ -24,6 +24,7 @@
     dbmate
     duckdb
     elixir
+    elixir-ls
     entr
     fish
     fzf
