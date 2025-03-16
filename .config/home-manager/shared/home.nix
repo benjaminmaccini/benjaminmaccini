@@ -35,12 +35,15 @@
     helix
     hledger
     hledger-ui
+    httpie
     hurl
     jq
     litecli
     neofetch
+    nnn
     nodejs
     pgcli
+    postgresql
     ripgrep
     R
     rustc
@@ -49,6 +52,7 @@
     silver-searcher
     sqlite
     syncthing
+    typescript-language-server
     typst
     uv
     vim

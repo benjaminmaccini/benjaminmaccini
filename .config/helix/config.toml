@@ -1,11 +1,23 @@
 theme = "gruvbox"
 
+[editor]
+cursorline = true
+lsp.display-inlay-hints = true
+
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
 select = "underline"
 
 [editor.file-picker]
-
 hidden = false
-git-ignore = false
+git-ignore = true
+
+[keys.insert]
+j = { k = "normal_mode" }
+
+[keys.normal]
+"ret" = "goto_word"
+
+[keys.normal."space"]
+o = "file_picker_in_current_buffer_directory"
