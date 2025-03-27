@@ -27,7 +27,7 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 nix run home-manager/master -- init --switch -b backup
 ```
 
-Keep things up to date with `home-manager switch` and the following
+Keep things up to date with `nix flake update && home-manager switch` and the following
 ```
 rsync -av --delete ~/.config/ ~/benjaminmaccini/.config/
 ```

@@ -2,7 +2,8 @@ theme = "gruvbox"
 
 [editor]
 cursorline = true
-lsp.display-inlay-hints = true
+rulers = [120]
+end-of-line-diagnostics = "hint"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -12,6 +13,9 @@ select = "underline"
 [editor.file-picker]
 hidden = false
 git-ignore = true
+
+[editor.inline-diagnostics]
+cursor-line = "error"
 
 [keys.insert]
 j = { k = "normal_mode" }

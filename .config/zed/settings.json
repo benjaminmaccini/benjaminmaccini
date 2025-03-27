@@ -33,6 +33,9 @@
       "arguments": ["prettier", "--stdin-filepath", "{buffer_path}"]
     }
   },
+  "buffer_font_features": {
+    "calt": false
+  },
   "language_overrides": {
     "TypeScript": {
       "use_language_server": true,
