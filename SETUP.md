@@ -14,7 +14,7 @@ cat .ssh/id_ed25519.pub
 
 # Copy into ssh keys on Github (navigate to the browser)
 # Clone the repo
-git clone https://github.com/benjaminmaccini/benjaminmaccini
+git clone git@github.com:benjaminmaccini/benjaminmaccini.git 
 cd benjaminmaccini
 
 # Copy the directory
