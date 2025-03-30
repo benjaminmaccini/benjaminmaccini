@@ -3,3 +3,6 @@
 pgcli/
 .config/zed/conversations*
 .config/zed/prompts*
+
+# Ignore any generated home.nix based on the system
+home.nix
