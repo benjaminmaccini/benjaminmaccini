@@ -18,7 +18,7 @@ git clone git@github.com:benjaminmaccini/benjaminmaccini.git
 cd benjaminmaccini
 
 # Copy the directory
-cp -R $(pwd)/.config/home-manager $HOME/.config
+cp -R $(pwd)/.config/* $HOME/.config
 
 # Install nix and nix#home-manager
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
@@ -37,25 +37,6 @@ rsync -av --delete ~/.config/ ~/benjaminmaccini/.config/
 Graphical applications that require the GPU (Zed, kitty, etc...) should be manually installed
 since home-manager lacks the permissions to handle system setup.
 
-## Hardware
-
-Things change a lot here, but I generally have two setups:
-- Keyboards:
- 	- Apple Magic Keyboard
- 	- [Mistel MD600v3](https://mistelkeyboard.com/products/d7283e95f4ffcbc7b90f2dc54d1a0468)
-- Mouse: [Logitech G502 Hero](https://www.logitechg.com/en-us/products/gaming-mice/g502-hero-gaming-mouse.910-005469.html)
-- Computers:
- 	- Onyx Boox Tab Ultra
-  - 2016 Dell Inspiron 7368 2in1
-    - 8.0 GiB
-   	- Intel® Core™ i5-6200U CPU
- 	- 2014 Mac Mini
-   	- 8.0 GiB
-   	- Intel® Core™ i5-4278U CPU @ 2.60GHz × 4
- 	- Home Server: Raspberry Pi 4 (pihole + tailscale)
-- Phone: iPhone 15
-- Analog: Composite notebooks
-
 ## Workflows/Ideologies
 
 **Applications-** Use native applications where possible and limit the urge to install non-base applications.
@@ -72,7 +53,7 @@ notes. I use Obsidian notes and pay for the sync functionality. Some considerati
 organize, just keep it as a dated, append-only log of ideas, events, etc...
 
 **Code Editing -**
-As it stands at the end of 2024, I use Zed as my primary with Vim keybindings for large projects and vim with a small config. Here are some guiding principles:
+As it stands at the end of 2024, I use Zed as my primary with Vim keybindings for large projects and helix for quick edits. Here are some guiding principles:
 - An editor is no replacement for _good dev tooling_. As a bonus, focusing on tooling allows for standardization amongst programmers in an organization.
 - Must-haves for coding
 	- Fuzzy searching
@@ -87,7 +68,6 @@ with, because particular editors can be _instructive_ when learning a new langau
 
 
 Other editors are fun to explore. But they provide marginal improvements for me. Here are my brief thoughts on those:
-- Helix: Really easy to set up and use. Key bindings are great but I had to install a separate terminal for color support and certain key bindings. The window navigation command (Ctrl-W) is too close to application window close (Cmd+W). I lost a good amount of unsaved work due to fat-thumbing and never looked back.
 - Neovim + fuckton of plugins: This has the biggest learning curve for any editor, but I'm glad I learned about things like LSP. I like the pseudo-IDE capabilty. Really no big complaints other than it is easy to bikeshed.
 - nano: Only good for sshing into raw systems that don't have vim.
 - Sublime: Somewhere between an IDE and a text editor. I used this a bunch back in university and it really blew my mind, that that level of software quality could be free. I've revisited over the years, but the multi-cursor is the only feature I really see as significant. Plus, to this day, the package management sketches me out.
