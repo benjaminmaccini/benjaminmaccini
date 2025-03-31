@@ -38,6 +38,7 @@
     hledger-ui
     httpie
     hurl
+    inotify-tools
     jq
     litecli
     neofetch
@@ -49,6 +50,7 @@
     R
     rustc
     rye
+    rsync
     signal-desktop
     silver-searcher
     sqlite
