@@ -44,7 +44,7 @@
                 inherit inputs;
             };
           };
-          "badmin@mac-laptop-silicon" = home-manager.lib.homeManagerConfiguration {
+          "badmin@mac-mini" = home-manager.lib.homeManagerConfiguration {
                       pkgs = nixpkgs.legacyPackages.aarch64-darwin;
                       modules = [
                           ./systems/mac-laptop-silicon/home.nix

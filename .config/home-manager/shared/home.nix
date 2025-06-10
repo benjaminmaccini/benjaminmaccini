@@ -38,7 +38,6 @@
     hledger-ui
     httpie
     hurl
-    inotify-tools
     jq
     litecli
     neofetch
