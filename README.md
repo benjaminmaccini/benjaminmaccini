@@ -1,4 +1,4 @@
-Howdy, I'm Ben, a Texan and a programmer with experience in startups, early-stage product development, algorithms
+Howdy, I'm Ben, a Masters student with the LBJ School of Public Affairs, focusing in all things food policy. I am also a programmer with experience in startups, early-stage product development, algorithms
 and machine learning. I have spent time in the restaurant industry, local food systems and in retail.
 Food, food policy and food-related technologies are my passion.
 
